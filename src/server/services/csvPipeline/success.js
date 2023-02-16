@@ -12,7 +12,7 @@
  */
 function success(req, res, comment = '') {
 	res.status(200) // 200 OK
-	.send(`<h1>SUCCESS Test</h1>${comment}`);
+	.send(`<h1>SUCCESS</h1>${comment}`);
 }
 
 /**
