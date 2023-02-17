@@ -7,6 +7,8 @@
  * meter and readings data.
  */
 
+
+const translation = require('../../client/app/translations/data');
 const moment = require('moment');
 const crypto = require('crypto');
 const express = require('express');
@@ -71,9 +73,9 @@ router.use(function (req, res, next) {
 					const { email, password } = request.body;
 					const verifiedUser = await verifyCredentials(email, password, true);
 					if (verifiedUser) {
-						isUserAuthorized(verifiedUser, csvRole) ? cb(null, true) : cb(new Error('Invalid credentials'));
+						isUserAuthorized(verifiedUser, csvRole) ? cb(null, true) : cb(new Error(translation['csv.verifiedUser']));
 					} else {
-						cb(new Error('Invalid credentials'));
+						cb(new Error(translation['csv.verifiedUser'])); //////////// 'Invalid credentials' 
 					}
 				}
 			} catch (error) {
@@ -98,7 +100,7 @@ router.use(function (req, res, next) {
 // We need this extra middleware because multer does not provide an option to guard against the case where no file is uploaded.
 router.use(function (req, res, next) {
 	if (!req.file) {
-		failure(req, res, new CSVPipelineError('No csv file was uploaded. A csv file must be submitted via the csvfile parameter.'));
+		failure(req, res, new CSVPipelineError(translation['csv.errorUploading'])); /////////////////////////////////////////////////////////////////////
 	} else {
 		next();
 	}
@@ -203,14 +205,13 @@ router.post('/readings', validateReadingsCsvUploadParams, async (req, res) => {
 	}
 	let message;
 	if (isAllReadingsOk) {
-		message = '<h2>It looks like the insert of the readings was a success.</h2>'
+		message = translation['csv.insertReadingsSuccess']
 		if (msgTotal !== '') {
-			message += '<h3>However, note that the processing of the readings returned these warning(s):</h3>' + msgTotal;
+			message += `${translation['csv.warningDuringReadingsProcess']} ${msgTotal}`;
 		}
 		success(req, res, message);
 	} else {
-		message = '<h2>It looks like the insert of the readings had issues with some or all of the readings where' +
-			' the processing of the readings returned these warning(s)/error(s):</h2>' + msgTotal;
+		message = `${translation['csv.insertReadingsFailed']} ${translation['csv.warningDuringReadingsProcess']}: ${msgTotal}}`;
 		failure(req, res, message);
 	}
 });

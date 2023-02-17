@@ -30,7 +30,7 @@ export default class MetersCSVUploadComponent extends React.Component<MetersCSVU
 				await this.props.submitCSV(files[0])
 				// TODO Using an alert is not the best. At some point this should be integrated
 				// with react.
-				window.alert('<h1>SUCCESS</h1>The meter upload was a success.');
+				window.alert('The meter upload was a success.');
 			}
 		} catch (error) {
 			// A failed axios request should result in an error.

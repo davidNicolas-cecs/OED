@@ -98,6 +98,15 @@ const localeData = {
 		"csv.tab.readings": "Readings",
 		"csv.upload.meters": "Upload Meters CSV ",
 		"csv.upload.readings": "Upload Readings CSV ",
+		/////////////////
+		"csv.errorUploading":  "A csv file must be submitted via the csvfile parameter.",
+		"csv.verifiedUser":"Invalid credentials",
+		"csv.insertReadingsSuccess":"It looks like the insert of the readings was a success.",
+		"csv.warningDuringReadingsProcess":"However, note that the processing of the readings returned these warning(s): ",
+		"csv.insertReadingsFailed":'It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ',
+		////////////////////////////////////////////
+
+
 		"day": "Day",
 		"days": "Days",
 		"decreasing": "decreasing",
@@ -401,6 +410,7 @@ const localeData = {
 		"you.cannot.create.a.cyclic.group": "You cannot create a cyclic group"
 	},
 	"fr": {
+
 		"400": "(Need French) 400 Bad Request",
 		"404": "404 Introuvable",
 		"4.weeks": "4 Semaines",
@@ -490,6 +500,14 @@ const localeData = {
 		"csv.tab.readings": "Lectures",
 		"csv.upload.meters": "Télécharger les compteurs au format CSV",
 		"csv.upload.readings": "Télécharger les lectures CSV",
+		////////////////////////////////////////
+		"csv.verifiedUser":"(Need french)Invalid credentials",
+		"csv.insertReadingsSuccess":"(Need french)It looks like the insert of the readings was a success.",
+		"csv.warningDuringReadingsProcess":"(need french)However, note that the processing of the readings returned these warning(s): ",
+		"csv.insertReadingsFailed":'(Need French)It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ',
+		"csv.errorUploading":"Aucun fichier CSV n\'a été téléchargé. Un fichier CSV doit être soumis via le paramètre csvfile.",
+		
+		///////////////////////////////////////////////////////////////////
 		"day": "Journée",
 		"days": "Journées",
 		"decreasing": "(need French) decreasing",
@@ -882,6 +900,14 @@ const localeData = {
 		"csv.tab.readings": "Lecturas",
 		"csv.upload.meters": "Cargar medidores de CSV",
 		"csv.upload.readings": "Cargar lecturas de CSV",
+		///////////////////////////////////////////
+
+		"csv.errorUploading":  "Se debe enviar un archivo csv a través del parámetro csvfile.",
+		"csv.verifiedUser": "Credenciales no Válidas",
+		"csv.insertReadingsSuccess":"Parece que la inserción de las lecturas fue un éxito.",
+		"csv.warningDuringReadingsProcess":"Sin embargo, tenga en cuenta que el procesamiento de las lecturas devolvió estas advertencias: ",
+		"csv.insertReadingsFailed":'Parece que la inserción de las lecturas tuvo problemas con algunas o todas las lecturas donde el procesamiento de las lecturas devolvió estas advertencias/errores: ',
+		/////////////////////////////////
 		"day": "Día",
 		"days": "Días",
 		"decreasing": "(need Spanish) decreasing",
