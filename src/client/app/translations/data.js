@@ -104,6 +104,8 @@ const localeData = {
 		"csv.insertReadingsSuccess":"It looks like the insert of the readings was a success.",
 		"csv.warningDuringReadingsProcess":"However, note that the processing of the readings returned these warning(s): ",
 		"csv.insertReadingsFailed":'It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ',
+		"csv.dstError":"Could not find DST crossing date in pipeline so giving up.",
+
 		////////////////////////////////////////////
 
 
@@ -506,7 +508,8 @@ const localeData = {
 		"csv.warningDuringReadingsProcess":"(need french)However, note that the processing of the readings returned these warning(s): ",
 		"csv.insertReadingsFailed":'(Need French)It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ',
 		"csv.errorUploading":"Aucun fichier CSV n\'a été téléchargé. Un fichier CSV doit être soumis via le paramètre csvfile.",
-		
+		"csv.dstError":"(Need French) Could not find DST crossing date in pipeline so giving up.",
+
 		///////////////////////////////////////////////////////////////////
 		"day": "Journée",
 		"days": "Journées",
@@ -907,6 +910,7 @@ const localeData = {
 		"csv.insertReadingsSuccess":"Parece que la inserción de las lecturas fue un éxito.",
 		"csv.warningDuringReadingsProcess":"Sin embargo, tenga en cuenta que el procesamiento de las lecturas devolvió estas advertencias: ",
 		"csv.insertReadingsFailed":'Parece que la inserción de las lecturas tuvo problemas con algunas o todas las lecturas donde el procesamiento de las lecturas devolvió estas advertencias/errores: ',
+		"csv.dstError":"(Need Spanish)Could not find DST crossing date in pipeline so giving up.",
 		/////////////////////////////////
 		"day": "Día",
 		"days": "Días",

@@ -3,7 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
-
+const translation = require('../../client/app/translations/data');
 const moment = require('moment-timezone');
 const { log } = require('../../log');
 const Meter = require('../../models/Meter');
@@ -805,7 +805,7 @@ function getZoneUntil(meterZone, pastCrossingTimestamp) {
 		}
 	}
 	// We really don't expect to not find the date desired. If this happens then throw an error.
-	throw new Error('Could not find DST crossing date in pipeline so giving up.');
+	throw new Error(translation['csv.dstError']);
 }
 
 /**
@@ -837,7 +837,7 @@ function inZone(meterZone, timestamp) {
 		}
 	}
 	// We really don't expect to not find the date desired. If this happens then throw an error.
-	throw new Error('Could not find DST crossing date in pipeline so giving up.');
+	throw new Error(translations['csv.dstError']);
 }
 
 module.exports = processData;
