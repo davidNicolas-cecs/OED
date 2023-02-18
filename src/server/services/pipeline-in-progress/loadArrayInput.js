@@ -7,6 +7,7 @@
 const Reading = require('../../models/Reading');
 const { log } = require('../../log');
 const processData = require('./processData');
+import translate from '../../../client/app/utils/translate';
 
 /**
  * Select and process needed values from a matrix and insert into DB.
@@ -44,8 +45,8 @@ async function loadArrayInput(dataRows, meterID, mapRowToModel, timeSort, readin
 				// DB insert failed. log it, note that processing is not okay & add to message user will get.
 				log.error('loadArrayInput failed during DB inserts with updates with: ' + error.stack);
 				isAllReadingsOk = false;
-				msgTotal += 'Attempting to insert the readings into the database with updates failed with error: \"' + error.stack +
-					'\n and the pipeline returned these messages: ' + msgTotal;
+				msgTotal += translate('csv.readings.input.update.error.p1') + '\"' + error.stack +
+					'\n ' + translate('csv.readings.input.error.p2') + msgTotal;//JesseVarGar use translate
 			})
 	} else {
 		await Reading.insertOrIgnoreAll(readingsToInsert, conn)
@@ -53,8 +54,8 @@ async function loadArrayInput(dataRows, meterID, mapRowToModel, timeSort, readin
 				// DB insert failed. log it, note that processing is not okay & add to message user will get.
 				log.error('loadArrayInput failed during DB inserts with: ' + error.stack);
 				isAllReadingsOk = false;
-				msgTotal += 'Attempting to insert the readings into the database failed with error: \"' + error.stack +
-					'\n and the pipeline returned these messages: ' + msgTotal;
+				msgTotal += translate('csv.readings.input.error.p1') + '\"' + error.stack +
+					'\n ' + translate('csv.readings.input.error.p2') + msgTotal;
 			})
 	}
 	return { isAllReadingsOk, msgTotal };
