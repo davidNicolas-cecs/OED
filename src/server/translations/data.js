@@ -22,7 +22,7 @@ exports.localeData = {
 		"csv.warning-during-readings-process":"However, note that the processing of the readings returned these warning(s): ",
 		"csv.insert-readings-failed":"It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ",
 		"csv.invalid-token":"Invalid token (either unauthorized or logged out)",
-
+		"csv.create-meter-false":"User Error: Meter with name '{meter}' not found. createMeter needs to be set true in order to automatically create meter."
 	},
 	"fr": {
 		"status.success": "SUCCÈS",
@@ -46,7 +46,8 @@ exports.localeData = {
 		"csv.warning-during-readings-process":"(need french)However, note that the processing of the readings returned these warning(s): ",
 		"csv.insert-readings-failed":'(Need French)It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ',
 		"csv.error-uploading":"Aucun fichier CSV n\'a été téléchargé. Un fichier CSV doit être soumis via le paramètre csvfile.",
-		"csv.invalid-token":"(Need French) Invalid token (either unauthorized or logged out"
+		"csv.invalid-token":"(Need French) Invalid token (either unauthorized or logged out",
+		"csv.create-meter-false":"(Need French) User Error: Meter with name '{meter}' not found. createMeter needs to be set true in order to automatically create meter."
 
 	},
 	"es": {
@@ -72,6 +73,7 @@ exports.localeData = {
 		"csv.warning-during-readings-process":"Sin embargo, tenga en cuenta que el procesamiento de las lecturas devolvió estas advertencias: ",
 		"csv.insert-readings-failed":'Parece que la inserción de las lecturas tuvo problemas con algunas o todas las lecturas donde el procesamiento de las lecturas devolvió estas advertencias/errores: ',
 		"csv.invalid-token":"(Need Spanish) Invalid token (either unauthorized or logged out)",
-		
+		"csv.create-meter-false":"(Need Spanish) User Error: Meter with name '{meter}' not found. createMeter needs to be set true in order to automatically create meter."
+
 	}
 }
