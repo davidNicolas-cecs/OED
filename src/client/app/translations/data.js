@@ -468,7 +468,6 @@ const localeData = {
 		"csv.download.size.limit": "(Need French) Sorry you don't have permissions to download due to large number of points.",
 		"csv.download.size.warning.size": "(Need French) File size will be about",
 		"csv.download.size.warning.verify": "(Need French) Are you sure you want to download",
-		"csv.readings.param.create.meter": "Create Meter",
 		"csv.readings.param.create.meter": "Créer un compteur",
 		"csv.readings.param.cumulative": "Cumulatif",
 		"csv.readings.param.cumulative.reset": "Réinitialisation cumulative",
