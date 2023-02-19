@@ -44,6 +44,9 @@ exports.localeData = {
 	"es": {
 		"status.success": "ÉXITO",
 		"status.failure": "FALLA",
+		"csv.readings.input.error.p1": "Error al intentar insertar las lecturas en la base de datos: ",
+		"csv.readings.input.error.p2": "y la canalización devolvió estos mensajes: ",
+		"csv.readings.input.update.error.p1": "Error al intentar insertar las lecturas en la base de datos con actualizaciones: ",
 		"csv.failed-to-write-file": "Error interno de OED: Error al escribir el archivo: {filename}",
 		"csv.missing-dst-crossing-date": "No se pudo encontrar la fecha de cruce de DST en la canalización, por lo que se rindió.",
 		"csv.invalid-gps-input": "(Need Spanish) For meter {meter} the gps coordinates of {gps} are invalid",
