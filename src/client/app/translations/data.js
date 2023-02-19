@@ -903,15 +903,6 @@ const localeData = {
 		"csv.tab.readings": "Lecturas",
 		"csv.upload.meters": "Cargar medidores de CSV",
 		"csv.upload.readings": "Cargar lecturas de CSV",
-		///////////////////////////////////////////
-
-		"csv.errorUploading":  "Se debe enviar un archivo csv a través del parámetro csvfile.",
-		"csv.verifiedUser": "Credenciales no Válidas",
-		"csv.insertReadingsSuccess":"Parece que la inserción de las lecturas fue un éxito.",
-		"csv.warningDuringReadingsProcess":"Sin embargo, tenga en cuenta que el procesamiento de las lecturas devolvió estas advertencias: ",
-		"csv.insertReadingsFailed":'Parece que la inserción de las lecturas tuvo problemas con algunas o todas las lecturas donde el procesamiento de las lecturas devolvió estas advertencias/errores: ',
-		"csv.dstError":"(Need Spanish)Could not find DST crossing date in pipeline so giving up.",
-		/////////////////////////////////
 		"day": "Día",
 		"days": "Días",
 		"decreasing": "(need Spanish) decreasing",
