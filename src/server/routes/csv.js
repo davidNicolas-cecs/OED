@@ -8,7 +8,7 @@
  */
 
 
-const translation = require('../../client/app/translations/data');
+const translate = require('../translate');
 const moment = require('moment');
 const crypto = require('crypto');
 const express = require('express');
@@ -66,16 +66,16 @@ router.use(function (req, res, next) {
 				const token = request.headers.token || request.body.token || request.query.token;
 				if (token) {
 					// If a token is found, then we will check authentication and validation via the token.
-					(await isTokenAuthorized(token, csvRole)) ? cb(null, true) : cb(new Error('Invalid token (either unauthorized or logged out'));
+					(await isTokenAuthorized(token, csvRole)) ? cb(null, true) : cb(new Error(translate('csv.invalid-token')));
 				} else {
 					// If no token is found, then the request is mostly like a curl request. We require an
 					// email and password to be supplied for curl requests.
 					const { email, password } = request.body;
 					const verifiedUser = await verifyCredentials(email, password, true);
 					if (verifiedUser) {
-						isUserAuthorized(verifiedUser, csvRole) ? cb(null, true) : cb(new Error(translation['csv.verifiedUser']));
+						isUserAuthorized(verifiedUser, csvRole) ? cb(null, true) : cb(new Error(translate('csv.verified-user')));
 					} else {
-						cb(new Error(translation['csv.verifiedUser'])); //////////// 'Invalid credentials' 
+						cb(new Error(translate('csv.verified-user'))); //////////// 'Invalid credentials' 
 					}
 				}
 			} catch (error) {
@@ -100,7 +100,7 @@ router.use(function (req, res, next) {
 // We need this extra middleware because multer does not provide an option to guard against the case where no file is uploaded.
 router.use(function (req, res, next) {
 	if (!req.file) {
-		failure(req, res, new CSVPipelineError(translation['csv.errorUploading'])); /////////////////////////////////////////////////////////////////////
+		failure(req, res, new CSVPipelineError(translate('csv.error-uploading'))); 
 	} else {
 		next();
 	}
@@ -113,7 +113,7 @@ router.post('/meters', validateMetersCsvUploadParams, async (req, res) => {
 	try {
 		log.info(`The file ${uploadedFilepath} was created to upload meters csv data`);
 		let fileBuffer = await fs.readFile(uploadedFilepath);
-		// Unzip uploaded file and save file to disk if the user
+		// Unzip uploaded file and save file to disk if the user 
 		// has indicated that the file is (g)zipped.
 		if (isGzip) {
 			fileBuffer = zlib.gunzipSync(fileBuffer);
@@ -161,7 +161,7 @@ router.post('/readings', validateReadingsCsvUploadParams, async (req, res) => {
 	try {
 		log.info(`The uploaded file ${uploadedFilepath} was created to upload readings csv data`);
 		let fileBuffer = await fs.readFile(uploadedFilepath);
-		// Unzip uploaded file and save file to disk if the user
+		// Unzip uploaded file and save file to disk if the user 
 		// has indicated that the file is (g)zipped.
 		if (isGzip) {
 			fileBuffer = zlib.gunzipSync(fileBuffer);
@@ -205,13 +205,13 @@ router.post('/readings', validateReadingsCsvUploadParams, async (req, res) => {
 	}
 	let message;
 	if (isAllReadingsOk) {
-		message = translation['csv.insertReadingsSuccess']
+		message = translate('csv.insert-readings-success')
 		if (msgTotal !== '') {
-			message += `${translation['csv.warningDuringReadingsProcess']} ${msgTotal}`;
+			message += `${translate('csv.warning-during-readings-process')} ${msgTotal}`;
 		}
 		success(req, res, message);
 	} else {
-		message = `${translation['csv.insertReadingsFailed']} ${translation['csv.warningDuringReadingsProcess']}: ${msgTotal}}`;
+		message = `${translate('csv.insert-readings-failed')} ${translate('csv.warning-during-readings-process')}: ${msgTotal}}`;
 		failure(req, res, message);
 	}
 });
