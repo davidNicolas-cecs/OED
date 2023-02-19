@@ -98,17 +98,6 @@ const localeData = {
 		"csv.tab.readings": "Readings",
 		"csv.upload.meters": "Upload Meters CSV ",
 		"csv.upload.readings": "Upload Readings CSV ",
-		/////////////////
-		"csv.errorUploading":  "A csv file must be submitted via the csvfile parameter.",
-		"csv.verifiedUser":"Invalid credentials",
-		"csv.insertReadingsSuccess":"It looks like the insert of the readings was a success.",
-		"csv.warningDuringReadingsProcess":"However, note that the processing of the readings returned these warning(s): ",
-		"csv.insertReadingsFailed":'It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ',
-		"csv.dstError":"Could not find DST crossing date in pipeline so giving up.",
-
-		////////////////////////////////////////////
-
-
 		"day": "Day",
 		"days": "Days",
 		"decreasing": "decreasing",
@@ -502,15 +491,6 @@ const localeData = {
 		"csv.tab.readings": "Lectures",
 		"csv.upload.meters": "Télécharger les compteurs au format CSV",
 		"csv.upload.readings": "Télécharger les lectures CSV",
-		////////////////////////////////////////
-		"csv.verifiedUser":"(Need french)Invalid credentials",
-		"csv.insertReadingsSuccess":"(Need french)It looks like the insert of the readings was a success.",
-		"csv.warningDuringReadingsProcess":"(need french)However, note that the processing of the readings returned these warning(s): ",
-		"csv.insertReadingsFailed":'(Need French)It looks like the insert of the readings had issues with some or all of the readings where the processing of the readings returned these warning(s)/error(s): ',
-		"csv.errorUploading":"Aucun fichier CSV n\'a été téléchargé. Un fichier CSV doit être soumis via le paramètre csvfile.",
-		"csv.dstError":"(Need French) Could not find DST crossing date in pipeline so giving up.",
-
-		///////////////////////////////////////////////////////////////////
 		"day": "Journée",
 		"days": "Journées",
 		"decreasing": "(need French) decreasing",

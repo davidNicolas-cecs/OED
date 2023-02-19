@@ -810,11 +810,7 @@ function getZoneUntil(meterZone, pastCrossingTimestamp) {
 		}
 	}
 	// We really don't expect to not find the date desired. If this happens then throw an error.
-<<<<<<< HEAD
-	throw new Error(translation['csv.dstError']);
-=======
 	throw new Error(translate('csv.missing-dst-crossing-date'));
->>>>>>> development
 }
 
 /**
@@ -846,11 +842,7 @@ function inZone(meterZone, timestamp) {
 		}
 	}
 	// We really don't expect to not find the date desired. If this happens then throw an error.
-<<<<<<< HEAD
-	throw new Error(translations['csv.dstError']);
-=======
 	throw new Error(translate('csv.missing-dst-crossing-date'));
->>>>>>> development
 }
 
 module.exports = processData;
